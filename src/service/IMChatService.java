@@ -129,7 +129,7 @@ public class IMChatService extends Service {
 					intent.putExtra(IMMessage.IMMESSAGE_KEY, msg);
 					intent.putExtra("notice", notice);
 					sendBroadcast(intent);
-					setNotiType(R.drawable.ic_launcher,
+					setNotiType(R.drawable.notiicon,
 							"新消息",
 							notice.getContent(), Tabbar.class, from);
 
