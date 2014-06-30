@@ -83,7 +83,6 @@ public abstract class AChating extends AppActivity{
 		filter.addAction(CommonValue.NEW_MESSAGE_ACTION);
 		registerReceiver(receiver, filter);
 		super.onResume();
-
 	}
 	
 	private BroadcastReceiver receiver = new BroadcastReceiver() {

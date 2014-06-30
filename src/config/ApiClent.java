@@ -235,26 +235,26 @@ public class ApiClent {
 		});
 	}
 	
-	public static void update(final ClientCallback callback) {
-		RequestParams params = new RequestParams();
-		QYRestClient.get("http://www.hdletgo.com/check.php", params, new AsyncHttpResponseHandler() {
-			@Override
-			public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-				Update update;
-				try {
-					update = Update.parse(new String(responseBody));
-					callback.onSuccess(update);
-				} catch (AppException e) {
-					Logger.i(e);
-				}
-			}
-			@Override
-			public void onFailure(int statusCode, Header[] headers,
-					byte[] responseBody, Throwable error) {
-				
-			}
-		});
-	}
+//	public static void update(final ClientCallback callback) {
+//		RequestParams params = new RequestParams();
+//		QYRestClient.get("http://www.hdletgo.com/check.php", params, new AsyncHttpResponseHandler() {
+//			@Override
+//			public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+//				Update update;
+//				try {
+//					update = Update.parse(new String(responseBody));
+//					callback.onSuccess(update);
+//				} catch (AppException e) {
+//					Logger.i(e);
+//				}
+//			}
+//			@Override
+//			public void onFailure(int statusCode, Header[] headers,
+//					byte[] responseBody, Throwable error) {
+//				
+//			}
+//		});
+//	}
 	
 	public static void uploadFile(String apiKey, String filepath, final ClientCallback callback) {
 		RequestParams params = new RequestParams();
